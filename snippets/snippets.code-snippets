@@ -13,6 +13,533 @@
             "};"
 
      ],
-     "description": "Components: React is based on the concept of components. Components are the building blocks of a React application, and they allow you to split your UI into smaller, reusable pieces."
-    }
+     "description": "React is based on the concept of components. Components are the building blocks of a React application, and they allow you to split your UI into smaller, reusable pieces."
+    },
+    "JSX in a React component":{
+      "prefix":"!jsx",
+      "body":[
+       "const MyComponent = () => {",
+         "return (",
+           "<div>",
+             "<h1>Hello, World!</h1>",
+             "<p>This is some text.</p>",
+           "</div>",
+         ");",
+       "};",
+       
+       "export default MyComponent;",
+       
+   
+      ],
+      "description": "React uses a syntax extension for JavaScript called JSX, which allows you to write HTML-like code within your JavaScript code. JSX makes it easy to build and understand your UI."
+     },
+     "Props in a React component":{
+      "prefix":"!props",
+      "body":[
+        "const MyComponent = (props) => {",
+          "return (",
+            "<div>",
+              "<h1>Hello, {props.name}!</h1>",
+              "<p>This is some text.</p>",
+            "</div>",
+          ");",
+        "};",
+        
+        "export default MyComponent;",
+        
+       
+       "export default MyComponent;",
+       
+   
+      ],
+      "description": "React components can accept data from the parent component using props. Props are a way of passing data from one component to another, and they allow you to make your components more dynamic and reusable."
+     },
+     "State in a React component":{
+      "prefix":"!state",
+      "body":[
+        "import React, { useState } from 'react';",
+
+"const MyComponent = () => {",
+  "const [count, setCount] = useState(0);",
+
+  "return (",
+    "<div>",
+      "<h1>Count: {count}</h1>",
+      "<button onClick={() => setCount(count + 1)}>",
+        "Increase count",
+      "</button>",
+    "</div>",
+  ");",
+"};",
+
+"export default MyComponent;",
+
+   
+      ],
+      "description": "React components can manage their own state, which is a way of storing data that can change within the component. State allows you to add interactivity to your UI, and it's updated using setState()."
+     },
+     "Event handler in a React component":{
+      "prefix":"!event",
+      "body":[
+        "import React, { useState } from 'react';",
+
+"const MyComponent = () => {",
+  "const [count, setCount] = useState(0);",
+
+  "const handleClick = ()",
+
+
+   
+      ],
+      "description": "React provides a way to handle events, such as clicks, in your components using event handlers. Event handlers allow you to add interactivity to your UI and respond to user actions."
+     },   
+     "React Router in a React ":{
+      "prefix":"!route",
+      "body":[
+       "import React from 'react';",
+"import { BrowserRouter, Route } from 'react-router-dom';",
+
+"import Home from './Home';",
+"import About from './About';",
+"import Contact from './Contact';",
+
+"const App = () => (",
+  "<BrowserRouter>",
+    "<div>",
+      "<Route exact path='/' component={Home} />",
+      "<Route path='/about' component={About} />",
+      "<Route path='/contact' component={Contact} />",
+    "</div>",
+  "</BrowserRouter>",
+");",
+
+"export default App;",
+
+      ],
+      "description": "Routing in React refers to the process of managing different URL paths in a React application. React Router is the most popular library for routing in React, and it allows you to define and manage the different routes in your application. First, you need to install React Router. Then, you can define your routes using the Route. component from react-router-dom"
+     },  
+     "Link component to navigate between the different routes ":{
+      "prefix":"!link",
+      "body":[
+        "import React from 'react';",
+        "import { Link } from 'react-router-dom';",
+        
+        "const Home = () => (",
+          "<div>",
+            "<h1>Home</h1>",
+            "<Link to='/about'>Go to About</Link>",
+            "<Link to='/contact'>Go to Contact</Link>",
+          "</div>",
+        ");",
+        
+        "export default Home;",
+        
+
+      ],
+      "description": "The Link component in React is a simple and intuitive way to navigate between different routes in your web application. It allows you to create clickable links that redirect users to different pages or sections of your website. The component is built using React Router, a popular library for managing and organizing the routing of your React applications. With the Link component, you can easily manage the navigation flow of your web application and ensure a seamless user experience."
+     },  
+     "Responsive Navbar in React":{
+      "prefix":"!nav",
+      "body":[
+        "import React from 'react';",
+"import { Link } from 'react-router-dom';",
+"import './Navbar.css';",
+
+"const Navbar = () => (",
+  "<nav className='navbar'>",
+    "<div className='navbar-container'>",
+      "<Link to='/' className='navbar-item'>",
+        "Home",
+      "</Link>",
+      "<Link to='/about' className='navbar-item'>",
+        "About",
+      "</Link>",
+      "<Link to='/contact' className='navbar-item'>",
+        "Contact Us",
+      "</Link>",
+    "</div>",
+  "</nav>",
+");",
+
+"export default Navbar;",
+
+"//CSS for the navigation bar:",
+"//This CSS creates a simple and responsive navigation bar, with a fixed width of 800px and centered on",
+"//the page. The buttons are styled with white text and are separated by a margin of 20px.",
+
+".navbar {",
+  "display: flex;",
+  "align-items: center;",
+  "justify-content: space-between;",
+  "padding: 10px 20px;",
+  "background-color: #333;",
+  "color: #fff;",
+"}",
+
+".navbar-container {",
+  "display: flex;",
+  "align-items: center;",
+  "justify-content: space-between;",
+  "max-width: 800px;",
+  "margin: 0 auto;",
+"}",
+
+".navbar-item {",
+  "color: #fff;",
+  "text-decoration: none;",
+  "margin-right: 20px;",
+"}",
+
+        
+
+      ],
+      "description": "This creates a simple and responsive navigation bar, with a fixed width of 800px and centered on the page. The buttons are styled with white text and are separated by a margin of 20px."
+     },  
+     "Responsive Footer in React":{
+      "prefix":"!footer",
+      "body":[
+        "import React from 'react';",
+"import { Link } from 'react-router-dom';",
+"import './Footer.css';",
+
+"const Footer = () => (",
+  "<footer className='footer'>",
+    "<div className='footer-container'>",
+      "<div className='footer-item'>",
+        "<h3>Address</h3>",
+        "<p>123 Main Street</p>",
+        "<p>Anytown, USA 12345</p>",
+      "</div>",
+      "<div className='footer-item'>",
+        "<h3>Phone Number</h3>",
+        "<p>(555) 555-5555</p>",
+      "</div>",
+      "<div className='footer-item'>",
+        "<h3>Activity Hours</h3>",
+        "<p>Monday - Friday: 9am - 5pm</p>",
+        "<p>Saturday: 10am - 2pm</p>",
+        "<p>Sunday: Closed</p>",
+      "</div>",
+      "<div className='footer-item'>",
+        "<h3>Contact Us</h3>",
+        "<Link to='/contact' className='footer-link'>",
+         " Contact Us",
+        "</Link>",
+      "</div>",
+    "</div>",
+  "</footer>",
+");",
+
+"export default Footer;",
+"",
+"",
+"//CSS for the footer:",
+"//This CSS creates a simple and responsive footer, with a fixed width of 800px and centered on the page.",
+"//The footer has a padding of 40px 20px and a dark background color. The text is white and each section is ",
+"//centered and has a width of 20%.The contact us button is styled with white text and has a margin of 20px ",
+"//at the top.",
+"",
+"",
+".footer {",
+  "display: flex;",
+  "align-items: center;",
+  "justify-content: space-between;",
+  "padding: 40px 20px;",
+  "background-color: #333;",
+  "color: #fff;",
+"}",
+
+".footer-container {",
+  "display: flex;",
+  "align-items: center;",
+  "justify-content: space-between;",
+  "max-width: 800px;",
+  "margin: 0 auto;",
+"}",
+
+".footer-item {",
+  "text-align: center;",
+  "width: 20%;",
+"}",
+
+".footer-link {",
+  "color: #fff;",
+  "text-decoration: none;",
+  "margin-top: 20px;",
+"}",
+
+        
+
+      ],
+      "description": "This creates a simple and responsive footer, with a fixed width of 800px and centered on the page. The footer has a padding of 40px 20px and a dark background color. The text is white and each section is centered and has a width of 20%. The contact us button is styled with white text and has a margin of 20px at the top."
+     }, 
+     "Create React App":{
+      "prefix":"!creat",
+      "body":[
+        "//Creating a new React application using Create React App,",
+        "//which is a command-line tool for quickly setting up a new React project:",
+         "",
+        "npx create-react-app my-app",
+        "",
+        "//Once you've created the React application using Create React App,",
+        "//you can start the development server and see your application running in the browser by running ",
+        "//the following command:",
+        "",
+        "cd my-app",
+        "npm start",
+        "",
+        "//This will start the development server and open the application in your default browser at ",
+        "//http://localhost:3000/. You can start making changes to your React application and ",
+        "//see them reflected in real-time in the browser.",
+      
+      ],
+      "description": "Creating a new React application using Create React App, which is a command-line tool for quickly setting up a new React project. Once you've created the React application using Create React App, you can start the development server and see your application running in the browser. This will start the development server and open the application in your default browser at http://localhost:3000/. You can start making changes to your React application and see them reflected in real-time in the browser."
+     },
+     "Responsive Landing Page in React":{
+      "prefix":"!landingpage",
+      "body":[
+        "import React from 'react';",
+"import './LandingPage.css';",
+
+"const LandingPage = () => (",
+  "<div className='landing-page'>",
+    "<section className='hero-section'>",
+      "<h1 className='hero-title'>Welcome to My App</h1>",
+      "<p className='hero-description'>",
+       " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor,",
+        "lacus eu congue euismod, libero libero tincidunt ipsum, a tincidunt",
+        "sapien nibh id urna.",
+      "</p>",
+    "</section>",
+    "<section className='slider-section'>",
+      "<h2>Slider</h2>",
+      "{/* Add your slider component here */}",
+    "</section>",
+    "<section className='testimonial-section'>",
+      "<h2>Testimonials</h2>",
+      "{/* Add your testimonial component here */}",
+    "</section>",
+    "<section className='text-image-section'>",
+      "<div className='text-section'>",
+        "<h2>Section Title</h2>",
+        "<p>",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor,",
+          "lacus eu congue euismod, libero libero tincidunt ipsum, a tincidunt",
+          "sapien nibh id urna.",
+        "</p>",
+      "</div>",
+      "<div className='image-section'>",
+        "<img src='https://via.placeholder.com/500x500' alt='placeholder' />",
+     " </div>",
+    "</section>",
+  "</div>",
+");",
+"",
+"export default LandingPage;",
+"//the LandingPage component is a functional component that returns a simple landing page for your website.",
+"//The landing page contains a hero section, a slider section, a testimonial section, a text and image section",
+
+"//CSS for the landing page",
+"",
+".landing-page {",
+  "display: flex;",
+  "flex-direction: column;",
+  "align-items: center;",
+  "padding: 40px 20px;",
+"}",
+
+".hero-section {",
+  "text-align: center;",
+  "margin-bottom: 40px;",
+"}",
+
+".hero-title {",
+  "font-size: 36px;",
+  "margin-bottom: 20px;",
+"}",
+
+".hero-description {",
+ " font-size: 18px;",
+  "color: #333;",
+ " margin-bottom: 40px;",
+"}",
+
+".slider-section,",
+".testimonial-section {",
+  "width: 80%;",
+  "margin-bottom: 40px;",
+"}",
+
+".text-image-section {",
+  "display: flex;",
+  "justify-content: space-between;",
+  "width: 80%;",
+  "margin-bottom: 40px;",
+"}",
+
+".text-section {",
+  "width: 60%;",
+"}",
+
+".image-section {",
+  "width: 40%;",
+  "text-align: center;",
+"}",
+
+".image-section img {",
+  "width: 100%;",
+  "max-width: 500px",
+     "}",
+      ],
+      "description": "This Landing Page component is a functional component that returns a simple landing page for your website. The landing page contains a hero section, a slider section, a testimonial section, and a text and image section."
+     },
+     "Simple Testimonial Component in React":{
+      "prefix":"!testimonial",
+      "body":[
+        "import React from 'react';",
+"import './Testimonial.css';",
+
+"const Testimonial = ({ testimonial }) => (",
+  "<div className='testimonial'>",
+    "<p className='testimonial-text'>{testimonial.text}</p>",
+    "<p className='testimonial-author'>{testimonial.author}</p>",
+ " </div>",
+");",
+
+"export default Testimonial;",
+"",
+"//CSS for the testimonial component:",
+"",
+".testimonial {",
+ " display: flex;",
+  "flex-direction: column;",
+  "align-items: center;",
+  "text-align: center;",
+  "padding: 40px 20px;",
+  "background-color: #f2f2f2;",
+  "border-radius: 10px;",
+  "box-shadow: 2px 2px 10px #ddd;",
+  "margin-bottom: 40px;",
+"}",
+
+".testimonial-text {",
+  "font-size: 18px;",
+  "color: #333;",
+ " margin-bottom: 20px;",
+"}",
+
+".testimonial-author {",
+  "font-size: 14px;",
+  "color: #777;",
+"}",
+
+      ],
+      "description": "This simple testimonial component in React is designed to display customer feedback and testimonials on your website. It is a lightweight and flexible component that can be easily customized to match your website's design and branding."
+     },
+     "Slider Component in React":{
+      "prefix":"!slider",
+      "body":[
+     
+        "import React, { useState } from 'react';",
+"import './Slider.css';",
+
+"const Slider = ({ slides }) => {",
+  "const [currentSlide, setCurrentSlide] = useState(0);",
+
+  "return (",
+    "<div className='slider'>",
+      "<div className='slides'>",
+        "{slides.map((slide, index) => (",
+          "<div",
+            "key={index}",
+            "className={`slide ${index === currentSlide ? 'active' : ''}`}",
+          ">",
+            "<img src={slide.image} alt={slide.alt} />",
+            "<p className='slide-text'>{slide.text}</p>",
+          "</div>",
+        "))}",
+      "</div>",
+      "<div className='slider-controls'>",
+        "<button onClick={() => setCurrentSlide(currentSlide - 1)}>",
+          "Previous",
+        "</button>",
+        "<button onClick={() => setCurrentSlide(currentSlide + 1)}>",
+          "Next",
+        "</button>",
+      "</div>",
+    "</div>",
+  ");",
+"};",
+
+"export default Slider;",
+
+"//the Slider component uses the useState hook to keep track of the current slide and the setCurrentSlide function",
+"//to change it. The component maps over the slides prop to create a slide for each element in the array and uses",
+"//the current slide to determine which slide should have the active class.",
+"",
+"//CSS for the slider component:",
+"",
+".slider {",
+  "position: relative;",
+  "height: 500px;",
+  "overflow: hidden;",
+"}",
+
+".slides {",
+  "display: flex;",
+  "height: 100%;",
+"}",
+
+".slide {",
+  "flex: 1;",
+  "display: flex;",
+  "flex-direction: column;",
+  "align-items: center;",
+  "justify-content: center;",
+  "height: 100%;",
+  "opacity: 0;",
+  "transition: opacity 1s ease-in-out;",
+"}",
+
+".slide.active {",
+  "opacity: 1;",
+"}",
+
+".slide-text {",
+  "font-size: 18px;",
+  "color: #333;",
+  "margin-top: 20px;",
+"}",
+
+".slider-controls {",
+  "position: absolute;",
+  "bottom: 20px;",
+  "display: flex;",
+  "justify-content: center;",
+  "width: 100%;",
+"}",
+
+".slider-controls button {",
+  "font-size: 14px;",
+  "padding: 10px 20px;",
+  "margin: 0 10px;",
+  "border-radius: 5px;",
+  "background-color: #333;",
+  "color: #fff;",
+  "cursor: pointer;",
+  "border: none;",
+"}",
+
+".slider-controls button:disabled {",
+  "background-color: #ccc;",
+  "cursor: not-allowed;",
+"}",
+
+     
+      ],
+      "description": "The Slider component in React is a versatile and user-friendly component that allows you to add a sliding element to your website. Whether you want to display images, products, or any other type of content, this component provides a smooth and intuitive way for users to navigate through your content."
+     }
+
 }
+
+  

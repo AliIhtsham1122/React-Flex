@@ -8,7 +8,7 @@
   },
   "icon": "React-icon.svg.png",
   "description": "A React Extension that contains all the basic code snippets for faster and easier development with React. This extension provides a comprehensive set of code snippets for various common tasks, including components, props, state, hooks, and more. With just a few keystrokes, developers can quickly access frequently used code patterns and add them to their project. This extension saves valuable time and effort, making the development process more efficient and streamlined. Whether you're a seasoned React developer or just starting out, this extension is a must-have for any React project.",
-  "version": "0.0.1",
+  "version": "2.0.2",
   "engines": {
     "vscode": "^1.75.0"
   },
