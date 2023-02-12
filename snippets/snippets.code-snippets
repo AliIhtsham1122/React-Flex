@@ -1,0 +1,18 @@
+{
+    "React Component":{
+     "prefix":"!component",
+     "body":[
+        "import React from 'react';",
+
+            "const MyComponent = () => {",
+            "return (",
+            "<div>",
+          "<h1>Hello, World!</h1>",
+            "</div>",
+         ");",
+            "};"
+
+     ],
+     "description": "Components: React is based on the concept of components. Components are the building blocks of a React application, and they allow you to split your UI into smaller, reusable pieces."
+    }
+}
